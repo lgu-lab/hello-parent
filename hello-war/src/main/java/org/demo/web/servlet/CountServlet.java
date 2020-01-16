@@ -29,10 +29,10 @@ public class CountServlet extends HttpServlet {
 	// ---- OK -----
 	//@EJB(lookup = "ejb:earname/modulename/BeanClass-or-Name!fully.qualified.RemoteInterface")
 	//@EJB(lookup="ejb:calculator-ear-0.0.1-SNAPSHOT/calculator-jar-ejb-0.0.1-SNAPSHOT/calculator!org.demo.ejb.calculator.CalculatorRemote")
-//	@EJB(lookup="ejb:calculator-ear-0.0.1-SNAPSHOT/calculator-jar-ejb-0.0.1-SNAPSHOT/CalculatorImpl!org.demo.ejb.calculator.CalculatorRemote")
+	@EJB(lookup="ejb:calculator-ear-0.0.1-SNAPSHOT/calculator-jar-ejb-0.0.1-SNAPSHOT/CalculatorImpl!org.demo.ejb.calculator.CalculatorRemote")
 	
-	// URI from JBoss console ( Runtime -> Subsystem -> JNDI View : JNDI Bindings -> "java:global" )
-	@EJB(lookup="java:global/calculator-ear/org.demo-calculator-jar-ejb-0.0.1-SNAPSHOT/calculator!org.demo.ejb.calculator.CalculatorRemote")
+	// URI from JBoss console ( Runtime -> Subsystem -> JNDI View : JNDI Bindings -> "java:global" ) : // Not OK
+//	@EJB(lookup="java:global/calculator-ear/org.demo-calculator-jar-ejb-0.0.1-SNAPSHOT/calculator!org.demo.ejb.calculator.CalculatorRemote")
 	
 	// With specific EAR name :  "calculator-ear" (set in application.xml)
 	//@EJB(lookup="ejb:calculator-ear/calculator-jar-ejb-0.0.1-SNAPSHOT/calculator!org.demo.ejb.calculator.CalculatorRemote")

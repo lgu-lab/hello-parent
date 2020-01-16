@@ -36,12 +36,12 @@ public class AddServlet extends HttpServlet {
 		try {
 			calculator = CalculatorRemoteProvider.lookup();
 		} catch (Exception e) {
-			out.append("ERROR : Exeception :  " + e);
+			out.append("ERROR : Exception :  " + e);
 			return;
 		}
 		
 		long r = calculator.add(1, 2);
-		out.append("add servlet : r = " + r);
+		out.append("add servlet --> remote calculator call : r = " + r);
 	}
 
 }
